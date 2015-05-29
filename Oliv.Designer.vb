@@ -94,17 +94,61 @@ Partial Class Oliv
         Me.TextBox11 = New System.Windows.Forms.TextBox()
         Me.Conf = New System.Windows.Forms.TabPage()
         Me.Trasf = New System.Windows.Forms.TabPage()
-        Me.DataGridView2 = New System.Windows.Forms.DataGridView()
-        Me.Label11 = New System.Windows.Forms.Label()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.Button4 = New System.Windows.Forms.Button()
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
         Me.Inter = New System.Windows.Forms.TabPage()
         Me.btn_about = New System.Windows.Forms.Button()
         Me.Label9 = New System.Windows.Forms.Label()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Button4 = New System.Windows.Forms.Button()
+        Me.Button16 = New System.Windows.Forms.Button()
+        Me.Button17 = New System.Windows.Forms.Button()
+        Me.Button18 = New System.Windows.Forms.Button()
+        Me.Button19 = New System.Windows.Forms.Button()
+        Me.DataGridView2 = New System.Windows.Forms.DataGridView()
+        Me.GroupBox5 = New System.Windows.Forms.GroupBox()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.TextBox13 = New System.Windows.Forms.TextBox()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.Label21 = New System.Windows.Forms.Label()
+        Me.Label22 = New System.Windows.Forms.Label()
+        Me.Label23 = New System.Windows.Forms.Label()
+        Me.Label24 = New System.Windows.Forms.Label()
+        Me.Label25 = New System.Windows.Forms.Label()
+        Me.TextBox15 = New System.Windows.Forms.TextBox()
+        Me.TextBox16 = New System.Windows.Forms.TextBox()
+        Me.TextBox17 = New System.Windows.Forms.TextBox()
+        Me.TextBox18 = New System.Windows.Forms.TextBox()
+        Me.TextBox19 = New System.Windows.Forms.TextBox()
+        Me.TextBox20 = New System.Windows.Forms.TextBox()
+        Me.Button20 = New System.Windows.Forms.Button()
+        Me.Button21 = New System.Windows.Forms.Button()
+        Me.Label26 = New System.Windows.Forms.Label()
+        Me.TextBox21 = New System.Windows.Forms.TextBox()
+        Me.Button22 = New System.Windows.Forms.Button()
+        Me.Button23 = New System.Windows.Forms.Button()
+        Me.Button24 = New System.Windows.Forms.Button()
+        Me.Button25 = New System.Windows.Forms.Button()
+        Me.Button26 = New System.Windows.Forms.Button()
+        Me.DataGridView5 = New System.Windows.Forms.DataGridView()
+        Me.GroupBox6 = New System.Windows.Forms.GroupBox()
+        Me.TextBox22 = New System.Windows.Forms.TextBox()
+        Me.Label27 = New System.Windows.Forms.Label()
+        Me.TextBox23 = New System.Windows.Forms.TextBox()
+        Me.Label28 = New System.Windows.Forms.Label()
+        Me.Label29 = New System.Windows.Forms.Label()
+        Me.Label30 = New System.Windows.Forms.Label()
+        Me.Label31 = New System.Windows.Forms.Label()
+        Me.Label32 = New System.Windows.Forms.Label()
+        Me.Label33 = New System.Windows.Forms.Label()
+        Me.TextBox24 = New System.Windows.Forms.TextBox()
+        Me.TextBox25 = New System.Windows.Forms.TextBox()
+        Me.TextBox26 = New System.Windows.Forms.TextBox()
+        Me.TextBox27 = New System.Windows.Forms.TextBox()
+        Me.TextBox28 = New System.Windows.Forms.TextBox()
+        Me.TextBox29 = New System.Windows.Forms.TextBox()
         Me.TabControl1.SuspendLayout()
         Me.Fornitori.SuspendLayout()
         CType(Me.DataGridFornitori, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -118,8 +162,12 @@ Partial Class Oliv
         Me.Carico.SuspendLayout()
         CType(Me.DataGridView3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox4.SuspendLayout()
+        Me.Conf.SuspendLayout()
         Me.Trasf.SuspendLayout()
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox5.SuspendLayout()
+        CType(Me.DataGridView5, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox6.SuspendLayout()
         Me.SuspendLayout()
         '
         'TabControl1
@@ -545,7 +593,7 @@ Partial Class Oliv
         Me.GroupBox3.Margin = New System.Windows.Forms.Padding(12, 25, 12, 12)
         Me.GroupBox3.Name = "GroupBox3"
         Me.GroupBox3.Padding = New System.Windows.Forms.Padding(12)
-        Me.GroupBox3.Size = New System.Drawing.Size(843, 665)
+        Me.GroupBox3.Size = New System.Drawing.Size(859, 665)
         Me.GroupBox3.TabIndex = 82
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "FORNITORI"
@@ -563,7 +611,7 @@ Partial Class Oliv
         Me.Button15.Margin = New System.Windows.Forms.Padding(6, 12, 25, 25)
         Me.Button15.Name = "Button15"
         Me.Button15.Padding = New System.Windows.Forms.Padding(38, 0, 38, 0)
-        Me.Button15.Size = New System.Drawing.Size(385, 62)
+        Me.Button15.Size = New System.Drawing.Size(401, 62)
         Me.Button15.TabIndex = 84
         Me.Button15.Text = "Refresh"
         Me.Button15.UseVisualStyleBackColor = True
@@ -588,7 +636,7 @@ Partial Class Oliv
         Me.TextBox14.Location = New System.Drawing.Point(367, 66)
         Me.TextBox14.Margin = New System.Windows.Forms.Padding(9, 6, 9, 6)
         Me.TextBox14.Name = "TextBox14"
-        Me.TextBox14.Size = New System.Drawing.Size(320, 37)
+        Me.TextBox14.Size = New System.Drawing.Size(336, 37)
         Me.TextBox14.TabIndex = 82
         Me.TextBox14.Text = "Intestazione"
         '
@@ -600,7 +648,7 @@ Partial Class Oliv
         Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
         Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button1.Location = New System.Drawing.Point(698, 66)
+        Me.Button1.Location = New System.Drawing.Point(714, 66)
         Me.Button1.Margin = New System.Windows.Forms.Padding(6, 25, 25, 6)
         Me.Button1.Name = "Button1"
         Me.Button1.Padding = New System.Windows.Forms.Padding(16, 0, 16, 0)
@@ -648,7 +696,7 @@ Partial Class Oliv
         Me.DataGridView1.RowHeadersVisible = False
         Me.DataGridView1.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
         Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DataGridView1.Size = New System.Drawing.Size(795, 421)
+        Me.DataGridView1.Size = New System.Drawing.Size(811, 421)
         Me.DataGridView1.StandardTab = True
         Me.DataGridView1.TabIndex = 76
         Me.DataGridView1.TabStop = False
@@ -772,7 +820,7 @@ Partial Class Oliv
         Me.Button6.Margin = New System.Windows.Forms.Padding(6, 12, 25, 25)
         Me.Button6.Name = "Button6"
         Me.Button6.Padding = New System.Windows.Forms.Padding(38, 0, 38, 0)
-        Me.Button6.Size = New System.Drawing.Size(674, 62)
+        Me.Button6.Size = New System.Drawing.Size(974, 62)
         Me.Button6.TabIndex = 27
         Me.Button6.Text = "Refresh"
         Me.Button6.UseVisualStyleBackColor = True
@@ -1097,6 +1145,17 @@ Partial Class Oliv
         '
         'Conf
         '
+        Me.Conf.Controls.Add(Me.Button2)
+        Me.Conf.Controls.Add(Me.Button3)
+        Me.Conf.Controls.Add(Me.Label10)
+        Me.Conf.Controls.Add(Me.TextBox1)
+        Me.Conf.Controls.Add(Me.Button4)
+        Me.Conf.Controls.Add(Me.Button16)
+        Me.Conf.Controls.Add(Me.Button17)
+        Me.Conf.Controls.Add(Me.Button18)
+        Me.Conf.Controls.Add(Me.Button19)
+        Me.Conf.Controls.Add(Me.DataGridView2)
+        Me.Conf.Controls.Add(Me.GroupBox5)
         Me.Conf.Location = New System.Drawing.Point(4, 44)
         Me.Conf.Margin = New System.Windows.Forms.Padding(4)
         Me.Conf.Name = "Conf"
@@ -1107,14 +1166,17 @@ Partial Class Oliv
         '
         'Trasf
         '
-        Me.Trasf.Controls.Add(Me.DataGridView2)
-        Me.Trasf.Controls.Add(Me.Label11)
-        Me.Trasf.Controls.Add(Me.TextBox2)
-        Me.Trasf.Controls.Add(Me.Button4)
-        Me.Trasf.Controls.Add(Me.Label10)
-        Me.Trasf.Controls.Add(Me.TextBox1)
-        Me.Trasf.Controls.Add(Me.Button3)
-        Me.Trasf.Controls.Add(Me.Button2)
+        Me.Trasf.Controls.Add(Me.Button20)
+        Me.Trasf.Controls.Add(Me.Button21)
+        Me.Trasf.Controls.Add(Me.Label26)
+        Me.Trasf.Controls.Add(Me.TextBox21)
+        Me.Trasf.Controls.Add(Me.Button22)
+        Me.Trasf.Controls.Add(Me.Button23)
+        Me.Trasf.Controls.Add(Me.Button24)
+        Me.Trasf.Controls.Add(Me.Button25)
+        Me.Trasf.Controls.Add(Me.Button26)
+        Me.Trasf.Controls.Add(Me.DataGridView5)
+        Me.Trasf.Controls.Add(Me.GroupBox6)
         Me.Trasf.Location = New System.Drawing.Point(4, 44)
         Me.Trasf.Margin = New System.Windows.Forms.Padding(4)
         Me.Trasf.Name = "Trasf"
@@ -1122,131 +1184,6 @@ Partial Class Oliv
         Me.Trasf.TabIndex = 4
         Me.Trasf.Text = "TASFERIMENTO"
         Me.Trasf.UseVisualStyleBackColor = True
-        '
-        'DataGridView2
-        '
-        Me.DataGridView2.AllowUserToAddRows = False
-        Me.DataGridView2.AllowUserToDeleteRows = False
-        Me.DataGridView2.AllowUserToResizeColumns = False
-        Me.DataGridView2.AllowUserToResizeRows = False
-        Me.DataGridView2.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.DataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.DataGridView2.ColumnHeadersHeight = 24
-        Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
-        Me.DataGridView2.Cursor = System.Windows.Forms.Cursors.Default
-        Me.DataGridView2.EnableHeadersVisualStyles = False
-        Me.DataGridView2.Location = New System.Drawing.Point(438, 167)
-        Me.DataGridView2.Margin = New System.Windows.Forms.Padding(12, 25, 12, 12)
-        Me.DataGridView2.Name = "DataGridView2"
-        Me.DataGridView2.ReadOnly = True
-        Me.DataGridView2.RowHeadersVisible = False
-        Me.DataGridView2.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DataGridView2.Size = New System.Drawing.Size(674, 395)
-        Me.DataGridView2.StandardTab = True
-        Me.DataGridView2.TabIndex = 34
-        Me.DataGridView2.TabStop = False
-        '
-        'Label11
-        '
-        Me.Label11.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label11.AutoSize = True
-        Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(525, 72)
-        Me.Label11.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(72, 31)
-        Me.Label11.TabIndex = 33
-        Me.Label11.Text = "NDA"
-        '
-        'TextBox2
-        '
-        Me.TextBox2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TextBox2.BackColor = System.Drawing.Color.LemonChiffon
-        Me.TextBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox2.Location = New System.Drawing.Point(439, 110)
-        Me.TextBox2.Margin = New System.Windows.Forms.Padding(9, 6, 9, 6)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(256, 37)
-        Me.TextBox2.TabIndex = 32
-        '
-        'Button4
-        '
-        Me.Button4.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGreen
-        Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button4.Image = CType(resources.GetObject("Button4.Image"), System.Drawing.Image)
-        Me.Button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button4.Location = New System.Drawing.Point(991, 110)
-        Me.Button4.Margin = New System.Windows.Forms.Padding(6, 25, 25, 6)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Padding = New System.Windows.Forms.Padding(16, 0, 16, 0)
-        Me.Button4.Size = New System.Drawing.Size(121, 39)
-        Me.Button4.TabIndex = 30
-        Me.Button4.Text = "Cerca"
-        Me.Button4.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Button4.UseVisualStyleBackColor = True
-        '
-        'Label10
-        '
-        Me.Label10.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label10.AutoSize = True
-        Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(772, 72)
-        Me.Label10.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(162, 31)
-        Me.Label10.TabIndex = 31
-        Me.Label10.Text = "Intestazione"
-        '
-        'TextBox1
-        '
-        Me.TextBox1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TextBox1.BackColor = System.Drawing.Color.LemonChiffon
-        Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(719, 110)
-        Me.TextBox1.Margin = New System.Windows.Forms.Padding(9, 6, 9, 6)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(256, 37)
-        Me.TextBox1.TabIndex = 29
-        '
-        'Button3
-        '
-        Me.Button3.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGreen
-        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.Image = CType(resources.GetObject("Button3.Image"), System.Drawing.Image)
-        Me.Button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button3.Location = New System.Drawing.Point(787, 576)
-        Me.Button3.Margin = New System.Windows.Forms.Padding(6, 12, 25, 25)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Padding = New System.Windows.Forms.Padding(38, 0, 38, 0)
-        Me.Button3.Size = New System.Drawing.Size(325, 62)
-        Me.Button3.TabIndex = 28
-        Me.Button3.Text = "Refresh"
-        Me.Button3.UseVisualStyleBackColor = True
-        '
-        'Button2
-        '
-        Me.Button2.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.Button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGreen
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Image = CType(resources.GetObject("Button2.Image"), System.Drawing.Image)
-        Me.Button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button2.Location = New System.Drawing.Point(439, 576)
-        Me.Button2.Margin = New System.Windows.Forms.Padding(6, 12, 25, 25)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Padding = New System.Windows.Forms.Padding(38, 0, 38, 0)
-        Me.Button2.Size = New System.Drawing.Size(325, 62)
-        Me.Button2.TabIndex = 27
-        Me.Button2.Text = "STAMPA"
-        Me.Button2.UseVisualStyleBackColor = True
         '
         'Inter
         '
@@ -1284,6 +1221,678 @@ Partial Class Oliv
     "283245709" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
         Me.Label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
+        'Button2
+        '
+        Me.Button2.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGreen
+        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.Image = CType(resources.GetObject("Button2.Image"), System.Drawing.Image)
+        Me.Button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button2.Location = New System.Drawing.Point(551, 606)
+        Me.Button2.Margin = New System.Windows.Forms.Padding(6, 12, 25, 25)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Padding = New System.Windows.Forms.Padding(38, 0, 38, 0)
+        Me.Button2.Size = New System.Drawing.Size(974, 62)
+        Me.Button2.TabIndex = 38
+        Me.Button2.Text = "Refresh"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
+        'Button3
+        '
+        Me.Button3.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGreen
+        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button3.Image = CType(resources.GetObject("Button3.Image"), System.Drawing.Image)
+        Me.Button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button3.Location = New System.Drawing.Point(1104, 34)
+        Me.Button3.Margin = New System.Windows.Forms.Padding(6, 25, 25, 25)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Padding = New System.Windows.Forms.Padding(16, 0, 16, 0)
+        Me.Button3.Size = New System.Drawing.Size(121, 39)
+        Me.Button3.TabIndex = 36
+        Me.Button3.Text = "Cerca"
+        Me.Button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Button3.UseVisualStyleBackColor = True
+        '
+        'Label10
+        '
+        Me.Label10.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label10.AutoSize = True
+        Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.Location = New System.Drawing.Point(546, 38)
+        Me.Label10.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(162, 31)
+        Me.Label10.TabIndex = 37
+        Me.Label10.Text = "Intestazione"
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TextBox1.BackColor = System.Drawing.Color.LemonChiffon
+        Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox1.Location = New System.Drawing.Point(719, 34)
+        Me.TextBox1.Margin = New System.Windows.Forms.Padding(9, 6, 9, 25)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(369, 37)
+        Me.TextBox1.TabIndex = 35
+        '
+        'Button4
+        '
+        Me.Button4.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.Button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGreen
+        Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button4.Image = CType(resources.GetObject("Button4.Image"), System.Drawing.Image)
+        Me.Button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button4.Location = New System.Drawing.Point(16, 606)
+        Me.Button4.Margin = New System.Windows.Forms.Padding(6, 12, 25, 25)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Padding = New System.Windows.Forms.Padding(38, 0, 38, 0)
+        Me.Button4.Size = New System.Drawing.Size(510, 62)
+        Me.Button4.TabIndex = 39
+        Me.Button4.Text = "STAMPA"
+        Me.Button4.UseVisualStyleBackColor = True
+        '
+        'Button16
+        '
+        Me.Button16.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button16.Location = New System.Drawing.Point(16, 514)
+        Me.Button16.Margin = New System.Windows.Forms.Padding(5, 6, 5, 12)
+        Me.Button16.Name = "Button16"
+        Me.Button16.Padding = New System.Windows.Forms.Padding(12, 0, 12, 0)
+        Me.Button16.Size = New System.Drawing.Size(156, 62)
+        Me.Button16.TabIndex = 32
+        Me.Button16.Text = "Torna"
+        Me.Button16.UseVisualStyleBackColor = True
+        Me.Button16.Visible = False
+        '
+        'Button17
+        '
+        Me.Button17.Enabled = False
+        Me.Button17.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button17.Image = CType(resources.GetObject("Button17.Image"), System.Drawing.Image)
+        Me.Button17.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button17.Location = New System.Drawing.Point(370, 514)
+        Me.Button17.Margin = New System.Windows.Forms.Padding(5, 6, 5, 12)
+        Me.Button17.Name = "Button17"
+        Me.Button17.Padding = New System.Windows.Forms.Padding(12, 0, 12, 0)
+        Me.Button17.Size = New System.Drawing.Size(156, 62)
+        Me.Button17.TabIndex = 34
+        Me.Button17.Text = "Elimina"
+        Me.Button17.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Button17.UseVisualStyleBackColor = True
+        '
+        'Button18
+        '
+        Me.Button18.Enabled = False
+        Me.Button18.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button18.Location = New System.Drawing.Point(193, 514)
+        Me.Button18.Margin = New System.Windows.Forms.Padding(5, 6, 5, 12)
+        Me.Button18.Name = "Button18"
+        Me.Button18.Padding = New System.Windows.Forms.Padding(12, 0, 12, 0)
+        Me.Button18.Size = New System.Drawing.Size(156, 62)
+        Me.Button18.TabIndex = 33
+        Me.Button18.Text = "Modifica"
+        Me.Button18.UseVisualStyleBackColor = True
+        '
+        'Button19
+        '
+        Me.Button19.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button19.Location = New System.Drawing.Point(16, 514)
+        Me.Button19.Margin = New System.Windows.Forms.Padding(5, 6, 5, 12)
+        Me.Button19.Name = "Button19"
+        Me.Button19.Padding = New System.Windows.Forms.Padding(12, 0, 12, 0)
+        Me.Button19.Size = New System.Drawing.Size(156, 62)
+        Me.Button19.TabIndex = 31
+        Me.Button19.Text = "Inserisci"
+        Me.Button19.UseVisualStyleBackColor = True
+        '
+        'DataGridView2
+        '
+        Me.DataGridView2.AllowUserToAddRows = False
+        Me.DataGridView2.AllowUserToDeleteRows = False
+        Me.DataGridView2.AllowUserToResizeColumns = False
+        Me.DataGridView2.AllowUserToResizeRows = False
+        Me.DataGridView2.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.DataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.DataGridView2.ColumnHeadersHeight = 24
+        Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
+        Me.DataGridView2.Cursor = System.Windows.Forms.Cursors.Default
+        Me.DataGridView2.EnableHeadersVisualStyles = False
+        Me.DataGridView2.Location = New System.Drawing.Point(551, 89)
+        Me.DataGridView2.Margin = New System.Windows.Forms.Padding(12, 25, 12, 12)
+        Me.DataGridView2.Name = "DataGridView2"
+        Me.DataGridView2.ReadOnly = True
+        Me.DataGridView2.RowHeadersVisible = False
+        Me.DataGridView2.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.DataGridView2.Size = New System.Drawing.Size(974, 500)
+        Me.DataGridView2.StandardTab = True
+        Me.DataGridView2.TabIndex = 30
+        Me.DataGridView2.TabStop = False
+        '
+        'GroupBox5
+        '
+        Me.GroupBox5.Controls.Add(Me.TextBox2)
+        Me.GroupBox5.Controls.Add(Me.Label11)
+        Me.GroupBox5.Controls.Add(Me.TextBox13)
+        Me.GroupBox5.Controls.Add(Me.Label12)
+        Me.GroupBox5.Controls.Add(Me.Label21)
+        Me.GroupBox5.Controls.Add(Me.Label22)
+        Me.GroupBox5.Controls.Add(Me.Label23)
+        Me.GroupBox5.Controls.Add(Me.Label24)
+        Me.GroupBox5.Controls.Add(Me.Label25)
+        Me.GroupBox5.Controls.Add(Me.TextBox15)
+        Me.GroupBox5.Controls.Add(Me.TextBox16)
+        Me.GroupBox5.Controls.Add(Me.TextBox17)
+        Me.GroupBox5.Controls.Add(Me.TextBox18)
+        Me.GroupBox5.Controls.Add(Me.TextBox19)
+        Me.GroupBox5.Controls.Add(Me.TextBox20)
+        Me.GroupBox5.Font = New System.Drawing.Font("Modern No. 20", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox5.Location = New System.Drawing.Point(16, 29)
+        Me.GroupBox5.Margin = New System.Windows.Forms.Padding(12, 25, 12, 12)
+        Me.GroupBox5.Name = "GroupBox5"
+        Me.GroupBox5.Padding = New System.Windows.Forms.Padding(12)
+        Me.GroupBox5.Size = New System.Drawing.Size(510, 467)
+        Me.GroupBox5.TabIndex = 29
+        Me.GroupBox5.TabStop = False
+        Me.GroupBox5.Text = "CONFEZIONAMENTO"
+        '
+        'TextBox2
+        '
+        Me.TextBox2.Enabled = False
+        Me.TextBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox2.Location = New System.Drawing.Point(405, 52)
+        Me.TextBox2.Margin = New System.Windows.Forms.Padding(4)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(83, 32)
+        Me.TextBox2.TabIndex = 1
+        Me.TextBox2.TabStop = False
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.Location = New System.Drawing.Point(69, 409)
+        Me.Label11.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(74, 26)
+        Me.Label11.TabIndex = 13
+        Me.Label11.Text = "E-Mail"
+        '
+        'TextBox13
+        '
+        Me.TextBox13.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox13.Location = New System.Drawing.Point(152, 405)
+        Me.TextBox13.Margin = New System.Windows.Forms.Padding(9)
+        Me.TextBox13.Name = "TextBox13"
+        Me.TextBox13.Size = New System.Drawing.Size(335, 32)
+        Me.TextBox13.TabIndex = 9
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label12.Location = New System.Drawing.Point(49, 359)
+        Me.Label12.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(95, 26)
+        Me.Label12.TabIndex = 11
+        Me.Label12.Text = "Telefono"
+        '
+        'Label21
+        '
+        Me.Label21.AutoSize = True
+        Me.Label21.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label21.Location = New System.Drawing.Point(86, 309)
+        Me.Label21.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label21.Name = "Label21"
+        Me.Label21.Size = New System.Drawing.Size(58, 26)
+        Me.Label21.TabIndex = 10
+        Me.Label21.Text = "CAP"
+        '
+        'Label22
+        '
+        Me.Label22.AutoSize = True
+        Me.Label22.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label22.Location = New System.Drawing.Point(42, 259)
+        Me.Label22.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label22.Name = "Label22"
+        Me.Label22.Size = New System.Drawing.Size(102, 26)
+        Me.Label22.TabIndex = 9
+        Me.Label22.Text = "Provincia"
+        '
+        'Label23
+        '
+        Me.Label23.AutoSize = True
+        Me.Label23.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label23.Location = New System.Drawing.Point(50, 209)
+        Me.Label23.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label23.Name = "Label23"
+        Me.Label23.Size = New System.Drawing.Size(93, 26)
+        Me.Label23.TabIndex = 8
+        Me.Label23.Text = "Indirizzo"
+        '
+        'Label24
+        '
+        Me.Label24.AutoSize = True
+        Me.Label24.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label24.Location = New System.Drawing.Point(85, 159)
+        Me.Label24.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label24.Name = "Label24"
+        Me.Label24.Size = New System.Drawing.Size(57, 26)
+        Me.Label24.TabIndex = 7
+        Me.Label24.Text = "Città"
+        '
+        'Label25
+        '
+        Me.Label25.AutoSize = True
+        Me.Label25.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label25.Location = New System.Drawing.Point(16, 109)
+        Me.Label25.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label25.Name = "Label25"
+        Me.Label25.Size = New System.Drawing.Size(129, 26)
+        Me.Label25.TabIndex = 6
+        Me.Label25.Text = "Intestazione"
+        '
+        'TextBox15
+        '
+        Me.TextBox15.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox15.Location = New System.Drawing.Point(152, 355)
+        Me.TextBox15.Margin = New System.Windows.Forms.Padding(9)
+        Me.TextBox15.Name = "TextBox15"
+        Me.TextBox15.Size = New System.Drawing.Size(335, 32)
+        Me.TextBox15.TabIndex = 8
+        '
+        'TextBox16
+        '
+        Me.TextBox16.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox16.Location = New System.Drawing.Point(152, 305)
+        Me.TextBox16.Margin = New System.Windows.Forms.Padding(9)
+        Me.TextBox16.Name = "TextBox16"
+        Me.TextBox16.Size = New System.Drawing.Size(335, 32)
+        Me.TextBox16.TabIndex = 7
+        '
+        'TextBox17
+        '
+        Me.TextBox17.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox17.Location = New System.Drawing.Point(152, 255)
+        Me.TextBox17.Margin = New System.Windows.Forms.Padding(9)
+        Me.TextBox17.Name = "TextBox17"
+        Me.TextBox17.Size = New System.Drawing.Size(335, 32)
+        Me.TextBox17.TabIndex = 6
+        '
+        'TextBox18
+        '
+        Me.TextBox18.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox18.Location = New System.Drawing.Point(152, 205)
+        Me.TextBox18.Margin = New System.Windows.Forms.Padding(9)
+        Me.TextBox18.Name = "TextBox18"
+        Me.TextBox18.Size = New System.Drawing.Size(335, 32)
+        Me.TextBox18.TabIndex = 5
+        '
+        'TextBox19
+        '
+        Me.TextBox19.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox19.Location = New System.Drawing.Point(152, 155)
+        Me.TextBox19.Margin = New System.Windows.Forms.Padding(9)
+        Me.TextBox19.Name = "TextBox19"
+        Me.TextBox19.Size = New System.Drawing.Size(335, 32)
+        Me.TextBox19.TabIndex = 4
+        '
+        'TextBox20
+        '
+        Me.TextBox20.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox20.Location = New System.Drawing.Point(152, 105)
+        Me.TextBox20.Margin = New System.Windows.Forms.Padding(9)
+        Me.TextBox20.Name = "TextBox20"
+        Me.TextBox20.Size = New System.Drawing.Size(335, 32)
+        Me.TextBox20.TabIndex = 3
+        '
+        'Button20
+        '
+        Me.Button20.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Button20.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGreen
+        Me.Button20.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button20.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button20.Image = CType(resources.GetObject("Button20.Image"), System.Drawing.Image)
+        Me.Button20.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button20.Location = New System.Drawing.Point(551, 606)
+        Me.Button20.Margin = New System.Windows.Forms.Padding(6, 12, 25, 25)
+        Me.Button20.Name = "Button20"
+        Me.Button20.Padding = New System.Windows.Forms.Padding(38, 0, 38, 0)
+        Me.Button20.Size = New System.Drawing.Size(974, 62)
+        Me.Button20.TabIndex = 38
+        Me.Button20.Text = "Refresh"
+        Me.Button20.UseVisualStyleBackColor = True
+        '
+        'Button21
+        '
+        Me.Button21.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Button21.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGreen
+        Me.Button21.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button21.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button21.Image = CType(resources.GetObject("Button21.Image"), System.Drawing.Image)
+        Me.Button21.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button21.Location = New System.Drawing.Point(1104, 34)
+        Me.Button21.Margin = New System.Windows.Forms.Padding(6, 25, 25, 25)
+        Me.Button21.Name = "Button21"
+        Me.Button21.Padding = New System.Windows.Forms.Padding(16, 0, 16, 0)
+        Me.Button21.Size = New System.Drawing.Size(121, 39)
+        Me.Button21.TabIndex = 36
+        Me.Button21.Text = "Cerca"
+        Me.Button21.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Button21.UseVisualStyleBackColor = True
+        '
+        'Label26
+        '
+        Me.Label26.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label26.AutoSize = True
+        Me.Label26.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label26.Location = New System.Drawing.Point(546, 38)
+        Me.Label26.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label26.Name = "Label26"
+        Me.Label26.Size = New System.Drawing.Size(162, 31)
+        Me.Label26.TabIndex = 37
+        Me.Label26.Text = "Intestazione"
+        '
+        'TextBox21
+        '
+        Me.TextBox21.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TextBox21.BackColor = System.Drawing.Color.LemonChiffon
+        Me.TextBox21.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox21.Location = New System.Drawing.Point(719, 34)
+        Me.TextBox21.Margin = New System.Windows.Forms.Padding(9, 6, 9, 25)
+        Me.TextBox21.Name = "TextBox21"
+        Me.TextBox21.Size = New System.Drawing.Size(369, 37)
+        Me.TextBox21.TabIndex = 35
+        '
+        'Button22
+        '
+        Me.Button22.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.Button22.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGreen
+        Me.Button22.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button22.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button22.Image = CType(resources.GetObject("Button22.Image"), System.Drawing.Image)
+        Me.Button22.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button22.Location = New System.Drawing.Point(16, 606)
+        Me.Button22.Margin = New System.Windows.Forms.Padding(6, 12, 25, 25)
+        Me.Button22.Name = "Button22"
+        Me.Button22.Padding = New System.Windows.Forms.Padding(38, 0, 38, 0)
+        Me.Button22.Size = New System.Drawing.Size(510, 62)
+        Me.Button22.TabIndex = 39
+        Me.Button22.Text = "STAMPA"
+        Me.Button22.UseVisualStyleBackColor = True
+        '
+        'Button23
+        '
+        Me.Button23.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button23.Location = New System.Drawing.Point(16, 514)
+        Me.Button23.Margin = New System.Windows.Forms.Padding(5, 6, 5, 12)
+        Me.Button23.Name = "Button23"
+        Me.Button23.Padding = New System.Windows.Forms.Padding(12, 0, 12, 0)
+        Me.Button23.Size = New System.Drawing.Size(156, 62)
+        Me.Button23.TabIndex = 32
+        Me.Button23.Text = "Torna"
+        Me.Button23.UseVisualStyleBackColor = True
+        Me.Button23.Visible = False
+        '
+        'Button24
+        '
+        Me.Button24.Enabled = False
+        Me.Button24.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button24.Image = CType(resources.GetObject("Button24.Image"), System.Drawing.Image)
+        Me.Button24.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button24.Location = New System.Drawing.Point(370, 514)
+        Me.Button24.Margin = New System.Windows.Forms.Padding(5, 6, 5, 12)
+        Me.Button24.Name = "Button24"
+        Me.Button24.Padding = New System.Windows.Forms.Padding(12, 0, 12, 0)
+        Me.Button24.Size = New System.Drawing.Size(156, 62)
+        Me.Button24.TabIndex = 34
+        Me.Button24.Text = "Elimina"
+        Me.Button24.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Button24.UseVisualStyleBackColor = True
+        '
+        'Button25
+        '
+        Me.Button25.Enabled = False
+        Me.Button25.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button25.Location = New System.Drawing.Point(193, 514)
+        Me.Button25.Margin = New System.Windows.Forms.Padding(5, 6, 5, 12)
+        Me.Button25.Name = "Button25"
+        Me.Button25.Padding = New System.Windows.Forms.Padding(12, 0, 12, 0)
+        Me.Button25.Size = New System.Drawing.Size(156, 62)
+        Me.Button25.TabIndex = 33
+        Me.Button25.Text = "Modifica"
+        Me.Button25.UseVisualStyleBackColor = True
+        '
+        'Button26
+        '
+        Me.Button26.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button26.Location = New System.Drawing.Point(16, 514)
+        Me.Button26.Margin = New System.Windows.Forms.Padding(5, 6, 5, 12)
+        Me.Button26.Name = "Button26"
+        Me.Button26.Padding = New System.Windows.Forms.Padding(12, 0, 12, 0)
+        Me.Button26.Size = New System.Drawing.Size(156, 62)
+        Me.Button26.TabIndex = 31
+        Me.Button26.Text = "Inserisci"
+        Me.Button26.UseVisualStyleBackColor = True
+        '
+        'DataGridView5
+        '
+        Me.DataGridView5.AllowUserToAddRows = False
+        Me.DataGridView5.AllowUserToDeleteRows = False
+        Me.DataGridView5.AllowUserToResizeColumns = False
+        Me.DataGridView5.AllowUserToResizeRows = False
+        Me.DataGridView5.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.DataGridView5.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.DataGridView5.ColumnHeadersHeight = 24
+        Me.DataGridView5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
+        Me.DataGridView5.Cursor = System.Windows.Forms.Cursors.Default
+        Me.DataGridView5.EnableHeadersVisualStyles = False
+        Me.DataGridView5.Location = New System.Drawing.Point(551, 89)
+        Me.DataGridView5.Margin = New System.Windows.Forms.Padding(12, 25, 12, 12)
+        Me.DataGridView5.Name = "DataGridView5"
+        Me.DataGridView5.ReadOnly = True
+        Me.DataGridView5.RowHeadersVisible = False
+        Me.DataGridView5.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DataGridView5.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.DataGridView5.Size = New System.Drawing.Size(974, 500)
+        Me.DataGridView5.StandardTab = True
+        Me.DataGridView5.TabIndex = 30
+        Me.DataGridView5.TabStop = False
+        '
+        'GroupBox6
+        '
+        Me.GroupBox6.Controls.Add(Me.TextBox22)
+        Me.GroupBox6.Controls.Add(Me.Label27)
+        Me.GroupBox6.Controls.Add(Me.TextBox23)
+        Me.GroupBox6.Controls.Add(Me.Label28)
+        Me.GroupBox6.Controls.Add(Me.Label29)
+        Me.GroupBox6.Controls.Add(Me.Label30)
+        Me.GroupBox6.Controls.Add(Me.Label31)
+        Me.GroupBox6.Controls.Add(Me.Label32)
+        Me.GroupBox6.Controls.Add(Me.Label33)
+        Me.GroupBox6.Controls.Add(Me.TextBox24)
+        Me.GroupBox6.Controls.Add(Me.TextBox25)
+        Me.GroupBox6.Controls.Add(Me.TextBox26)
+        Me.GroupBox6.Controls.Add(Me.TextBox27)
+        Me.GroupBox6.Controls.Add(Me.TextBox28)
+        Me.GroupBox6.Controls.Add(Me.TextBox29)
+        Me.GroupBox6.Font = New System.Drawing.Font("Modern No. 20", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox6.Location = New System.Drawing.Point(16, 29)
+        Me.GroupBox6.Margin = New System.Windows.Forms.Padding(12, 25, 12, 12)
+        Me.GroupBox6.Name = "GroupBox6"
+        Me.GroupBox6.Padding = New System.Windows.Forms.Padding(12)
+        Me.GroupBox6.Size = New System.Drawing.Size(510, 467)
+        Me.GroupBox6.TabIndex = 29
+        Me.GroupBox6.TabStop = False
+        Me.GroupBox6.Text = "TRASFERIMENTO"
+        '
+        'TextBox22
+        '
+        Me.TextBox22.Enabled = False
+        Me.TextBox22.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox22.Location = New System.Drawing.Point(405, 52)
+        Me.TextBox22.Margin = New System.Windows.Forms.Padding(4)
+        Me.TextBox22.Name = "TextBox22"
+        Me.TextBox22.Size = New System.Drawing.Size(83, 32)
+        Me.TextBox22.TabIndex = 1
+        Me.TextBox22.TabStop = False
+        '
+        'Label27
+        '
+        Me.Label27.AutoSize = True
+        Me.Label27.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label27.Location = New System.Drawing.Point(69, 409)
+        Me.Label27.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label27.Name = "Label27"
+        Me.Label27.Size = New System.Drawing.Size(74, 26)
+        Me.Label27.TabIndex = 13
+        Me.Label27.Text = "E-Mail"
+        '
+        'TextBox23
+        '
+        Me.TextBox23.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox23.Location = New System.Drawing.Point(152, 405)
+        Me.TextBox23.Margin = New System.Windows.Forms.Padding(9)
+        Me.TextBox23.Name = "TextBox23"
+        Me.TextBox23.Size = New System.Drawing.Size(335, 32)
+        Me.TextBox23.TabIndex = 9
+        '
+        'Label28
+        '
+        Me.Label28.AutoSize = True
+        Me.Label28.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label28.Location = New System.Drawing.Point(49, 359)
+        Me.Label28.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label28.Name = "Label28"
+        Me.Label28.Size = New System.Drawing.Size(95, 26)
+        Me.Label28.TabIndex = 11
+        Me.Label28.Text = "Telefono"
+        '
+        'Label29
+        '
+        Me.Label29.AutoSize = True
+        Me.Label29.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label29.Location = New System.Drawing.Point(86, 309)
+        Me.Label29.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label29.Name = "Label29"
+        Me.Label29.Size = New System.Drawing.Size(58, 26)
+        Me.Label29.TabIndex = 10
+        Me.Label29.Text = "CAP"
+        '
+        'Label30
+        '
+        Me.Label30.AutoSize = True
+        Me.Label30.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label30.Location = New System.Drawing.Point(42, 259)
+        Me.Label30.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label30.Name = "Label30"
+        Me.Label30.Size = New System.Drawing.Size(102, 26)
+        Me.Label30.TabIndex = 9
+        Me.Label30.Text = "Provincia"
+        '
+        'Label31
+        '
+        Me.Label31.AutoSize = True
+        Me.Label31.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label31.Location = New System.Drawing.Point(50, 209)
+        Me.Label31.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label31.Name = "Label31"
+        Me.Label31.Size = New System.Drawing.Size(93, 26)
+        Me.Label31.TabIndex = 8
+        Me.Label31.Text = "Indirizzo"
+        '
+        'Label32
+        '
+        Me.Label32.AutoSize = True
+        Me.Label32.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label32.Location = New System.Drawing.Point(85, 159)
+        Me.Label32.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label32.Name = "Label32"
+        Me.Label32.Size = New System.Drawing.Size(57, 26)
+        Me.Label32.TabIndex = 7
+        Me.Label32.Text = "Città"
+        '
+        'Label33
+        '
+        Me.Label33.AutoSize = True
+        Me.Label33.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label33.Location = New System.Drawing.Point(16, 109)
+        Me.Label33.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label33.Name = "Label33"
+        Me.Label33.Size = New System.Drawing.Size(129, 26)
+        Me.Label33.TabIndex = 6
+        Me.Label33.Text = "Intestazione"
+        '
+        'TextBox24
+        '
+        Me.TextBox24.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox24.Location = New System.Drawing.Point(152, 355)
+        Me.TextBox24.Margin = New System.Windows.Forms.Padding(9)
+        Me.TextBox24.Name = "TextBox24"
+        Me.TextBox24.Size = New System.Drawing.Size(335, 32)
+        Me.TextBox24.TabIndex = 8
+        '
+        'TextBox25
+        '
+        Me.TextBox25.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox25.Location = New System.Drawing.Point(152, 305)
+        Me.TextBox25.Margin = New System.Windows.Forms.Padding(9)
+        Me.TextBox25.Name = "TextBox25"
+        Me.TextBox25.Size = New System.Drawing.Size(335, 32)
+        Me.TextBox25.TabIndex = 7
+        '
+        'TextBox26
+        '
+        Me.TextBox26.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox26.Location = New System.Drawing.Point(152, 255)
+        Me.TextBox26.Margin = New System.Windows.Forms.Padding(9)
+        Me.TextBox26.Name = "TextBox26"
+        Me.TextBox26.Size = New System.Drawing.Size(335, 32)
+        Me.TextBox26.TabIndex = 6
+        '
+        'TextBox27
+        '
+        Me.TextBox27.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox27.Location = New System.Drawing.Point(152, 205)
+        Me.TextBox27.Margin = New System.Windows.Forms.Padding(9)
+        Me.TextBox27.Name = "TextBox27"
+        Me.TextBox27.Size = New System.Drawing.Size(335, 32)
+        Me.TextBox27.TabIndex = 5
+        '
+        'TextBox28
+        '
+        Me.TextBox28.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox28.Location = New System.Drawing.Point(152, 155)
+        Me.TextBox28.Margin = New System.Windows.Forms.Padding(9)
+        Me.TextBox28.Name = "TextBox28"
+        Me.TextBox28.Size = New System.Drawing.Size(335, 32)
+        Me.TextBox28.TabIndex = 4
+        '
+        'TextBox29
+        '
+        Me.TextBox29.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox29.Location = New System.Drawing.Point(152, 105)
+        Me.TextBox29.Margin = New System.Windows.Forms.Padding(9)
+        Me.TextBox29.Name = "TextBox29"
+        Me.TextBox29.Size = New System.Drawing.Size(335, 32)
+        Me.TextBox29.TabIndex = 3
+        '
         'Oliv
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(120.0!, 120.0!)
@@ -1318,9 +1927,16 @@ Partial Class Oliv
         CType(Me.DataGridView3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox4.ResumeLayout(False)
         Me.GroupBox4.PerformLayout()
+        Me.Conf.ResumeLayout(False)
+        Me.Conf.PerformLayout()
         Me.Trasf.ResumeLayout(False)
         Me.Trasf.PerformLayout()
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox5.ResumeLayout(False)
+        Me.GroupBox5.PerformLayout()
+        CType(Me.DataGridView5, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox6.ResumeLayout(False)
+        Me.GroupBox6.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -1386,14 +2002,6 @@ Partial Class Oliv
     Friend WithEvents TextBox9 As System.Windows.Forms.TextBox
     Friend WithEvents TextBox10 As System.Windows.Forms.TextBox
     Friend WithEvents TextBox11 As System.Windows.Forms.TextBox
-    Friend WithEvents DataGridView2 As System.Windows.Forms.DataGridView
-    Friend WithEvents Label11 As System.Windows.Forms.Label
-    Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
-    Friend WithEvents Button4 As System.Windows.Forms.Button
-    Friend WithEvents Label10 As System.Windows.Forms.Label
-    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
-    Friend WithEvents Button3 As System.Windows.Forms.Button
-    Friend WithEvents Button2 As System.Windows.Forms.Button
     Friend WithEvents Button13 As System.Windows.Forms.Button
     Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
     Friend WithEvents ComboBox2 As System.Windows.Forms.ComboBox
@@ -1406,5 +2014,57 @@ Partial Class Oliv
     Friend WithEvents TextBox12 As System.Windows.Forms.TextBox
     Friend WithEvents TextBox14 As System.Windows.Forms.TextBox
     Friend WithEvents Button15 As System.Windows.Forms.Button
+    Friend WithEvents Button2 As System.Windows.Forms.Button
+    Friend WithEvents Button3 As System.Windows.Forms.Button
+    Friend WithEvents Label10 As System.Windows.Forms.Label
+    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
+    Friend WithEvents Button4 As System.Windows.Forms.Button
+    Friend WithEvents Button16 As System.Windows.Forms.Button
+    Friend WithEvents Button17 As System.Windows.Forms.Button
+    Friend WithEvents Button18 As System.Windows.Forms.Button
+    Friend WithEvents Button19 As System.Windows.Forms.Button
+    Friend WithEvents DataGridView2 As System.Windows.Forms.DataGridView
+    Friend WithEvents GroupBox5 As System.Windows.Forms.GroupBox
+    Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
+    Friend WithEvents Label11 As System.Windows.Forms.Label
+    Friend WithEvents TextBox13 As System.Windows.Forms.TextBox
+    Friend WithEvents Label12 As System.Windows.Forms.Label
+    Friend WithEvents Label21 As System.Windows.Forms.Label
+    Friend WithEvents Label22 As System.Windows.Forms.Label
+    Friend WithEvents Label23 As System.Windows.Forms.Label
+    Friend WithEvents Label24 As System.Windows.Forms.Label
+    Friend WithEvents Label25 As System.Windows.Forms.Label
+    Friend WithEvents TextBox15 As System.Windows.Forms.TextBox
+    Friend WithEvents TextBox16 As System.Windows.Forms.TextBox
+    Friend WithEvents TextBox17 As System.Windows.Forms.TextBox
+    Friend WithEvents TextBox18 As System.Windows.Forms.TextBox
+    Friend WithEvents TextBox19 As System.Windows.Forms.TextBox
+    Friend WithEvents TextBox20 As System.Windows.Forms.TextBox
+    Friend WithEvents Button20 As System.Windows.Forms.Button
+    Friend WithEvents Button21 As System.Windows.Forms.Button
+    Friend WithEvents Label26 As System.Windows.Forms.Label
+    Friend WithEvents TextBox21 As System.Windows.Forms.TextBox
+    Friend WithEvents Button22 As System.Windows.Forms.Button
+    Friend WithEvents Button23 As System.Windows.Forms.Button
+    Friend WithEvents Button24 As System.Windows.Forms.Button
+    Friend WithEvents Button25 As System.Windows.Forms.Button
+    Friend WithEvents Button26 As System.Windows.Forms.Button
+    Friend WithEvents DataGridView5 As System.Windows.Forms.DataGridView
+    Friend WithEvents GroupBox6 As System.Windows.Forms.GroupBox
+    Friend WithEvents TextBox22 As System.Windows.Forms.TextBox
+    Friend WithEvents Label27 As System.Windows.Forms.Label
+    Friend WithEvents TextBox23 As System.Windows.Forms.TextBox
+    Friend WithEvents Label28 As System.Windows.Forms.Label
+    Friend WithEvents Label29 As System.Windows.Forms.Label
+    Friend WithEvents Label30 As System.Windows.Forms.Label
+    Friend WithEvents Label31 As System.Windows.Forms.Label
+    Friend WithEvents Label32 As System.Windows.Forms.Label
+    Friend WithEvents Label33 As System.Windows.Forms.Label
+    Friend WithEvents TextBox24 As System.Windows.Forms.TextBox
+    Friend WithEvents TextBox25 As System.Windows.Forms.TextBox
+    Friend WithEvents TextBox26 As System.Windows.Forms.TextBox
+    Friend WithEvents TextBox27 As System.Windows.Forms.TextBox
+    Friend WithEvents TextBox28 As System.Windows.Forms.TextBox
+    Friend WithEvents TextBox29 As System.Windows.Forms.TextBox
 
 End Class
