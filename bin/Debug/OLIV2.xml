@@ -1,0 +1,220 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+OLIV2
+</name>
+</assembly>
+<members>
+<member name="T:OLIV2.OLIVERDataSet.CaricoDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:OLIV2.OLIVERDataSet.ConfDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:OLIV2.OLIVERDataSet.FornIntoConfDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:OLIV2.OLIVERDataSet.FornIntoSilosDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:OLIV2.OLIVERDataSet.FornitoriDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:OLIV2.OLIVERDataSet.OlioDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:OLIV2.OLIVERDataSet.SilosDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:OLIV2.OLIVERDataSet.TrasfDestDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:OLIV2.OLIVERDataSet.TrasferimentoDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:OLIV2.OLIVERDataSet.TrasfOrigDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:OLIV2.OLIVERDataSet.CaricoRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:OLIV2.OLIVERDataSet.ConfRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:OLIV2.OLIVERDataSet.FornIntoConfRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:OLIV2.OLIVERDataSet.FornIntoSilosRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:OLIV2.OLIVERDataSet.FornitoriRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:OLIV2.OLIVERDataSet.OlioRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:OLIV2.OLIVERDataSet.SilosRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:OLIV2.OLIVERDataSet.TrasfDestRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:OLIV2.OLIVERDataSet.TrasferimentoRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:OLIV2.OLIVERDataSet.TrasfOrigRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:OLIV2.OLIVERDataSet.CaricoRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:OLIV2.OLIVERDataSet.ConfRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:OLIV2.OLIVERDataSet.FornIntoConfRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:OLIV2.OLIVERDataSet.FornIntoSilosRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:OLIV2.OLIVERDataSet.FornitoriRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:OLIV2.OLIVERDataSet.OlioRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:OLIV2.OLIVERDataSet.SilosRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:OLIV2.OLIVERDataSet.TrasfDestRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:OLIV2.OLIVERDataSet.TrasferimentoRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:OLIV2.OLIVERDataSet.TrasfOrigRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:OLIV2.OLIVERDataSet">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:OLIV2.OLIVERDataSetTableAdapters.CaricoTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:OLIV2.OLIVERDataSetTableAdapters.ConfTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:OLIV2.OLIVERDataSetTableAdapters.FornIntoConfTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:OLIV2.OLIVERDataSetTableAdapters.FornIntoSilosTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:OLIV2.OLIVERDataSetTableAdapters.FornitoriTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:OLIV2.OLIVERDataSetTableAdapters.OlioTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:OLIV2.OLIVERDataSetTableAdapters.SilosTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:OLIV2.OLIVERDataSetTableAdapters.TrasfDestTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:OLIV2.OLIVERDataSetTableAdapters.TrasferimentoTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:OLIV2.OLIVERDataSetTableAdapters.TrasfOrigTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="M:OLIV2.OLIVERDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(OLIV2.OLIVERDataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Update rows in top-down order.
+</summary>
+</member><member name="M:OLIV2.OLIVERDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(OLIV2.OLIVERDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Insert rows in top-down order.
+</summary>
+</member><member name="M:OLIV2.OLIVERDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(OLIV2.OLIVERDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Delete rows in bottom-up order.
+</summary>
+</member><member name="M:OLIV2.OLIVERDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member><member name="M:OLIV2.OLIVERDataSetTableAdapters.TableAdapterManager.UpdateAll(OLIV2.OLIVERDataSet)">
+	<summary>
+Update all changes to the dataset.
+</summary>
+</member><member name="T:OLIV2.OLIVERDataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
+	<summary>
+Update Order Option
+</summary>
+</member><member name="T:OLIV2.OLIVERDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
+	<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member><member name="T:OLIV2.OLIVERDataSetTableAdapters.TableAdapterManager">
+	<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member><member name="P:OLIV2.My.Resources.Resources.ResourceManager">
+	<summary>
+  Restituisce l'istanza di ResourceManager nella cache utilizzata da questa classe.
+</summary>
+</member><member name="P:OLIV2.My.Resources.Resources.Culture">
+	<summary>
+  Esegue l'override della proprietà CurrentUICulture del thread corrente per tutte le
+  ricerche di risorse eseguite utilizzando questa classe di risorse fortemente tipizzata.
+</summary>
+</member><member name="T:OLIV2.My.Resources.Resources">
+	<summary>
+  Classe di risorse fortemente tipizzata per la ricerca di stringhe localizzate e così via.
+</summary>
+</member>
+</members>
+</doc>
