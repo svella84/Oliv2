@@ -28,21 +28,21 @@ Public Class Oliv
 
         'Imposto i nomi alle etichette delle colonne della DataGrid e la loro larghezza in pixel
         DataGridFornitori.Columns("ID_fornitore").HeaderText = "ID"
-        DataGridFornitori.Columns("ID_fornitore").Width = 50
+        DataGridFornitori.Columns("ID_fornitore").MinimumWidth = 50
         DataGridFornitori.Columns("intestazione").HeaderText = "Intestazione"
-        DataGridFornitori.Columns("intestazione").Width = 125
+        DataGridFornitori.Columns("intestazione").MinimumWidth = 125
         DataGridFornitori.Columns("indirizzo").HeaderText = "Indirizzo"
-        DataGridFornitori.Columns("indirizzo").Width = 135
+        DataGridFornitori.Columns("indirizzo").MinimumWidth = 135
         DataGridFornitori.Columns("citta").HeaderText = "Città"
-        DataGridFornitori.Columns("citta").Width = 100
+        DataGridFornitori.Columns("citta").MinimumWidth = 100
         DataGridFornitori.Columns("provincia").HeaderText = "Prov."
-        DataGridFornitori.Columns("provincia").Width = 60
+        DataGridFornitori.Columns("provincia").MinimumWidth = 60
         DataGridFornitori.Columns("cap").HeaderText = "CAP"
-        DataGridFornitori.Columns("cap").Width = 60
+        DataGridFornitori.Columns("cap").MinimumWidth = 60
         DataGridFornitori.Columns("tel").HeaderText = "Recapito"
-        DataGridFornitori.Columns("tel").Width = 100
+        DataGridFornitori.Columns("tel").MinimumWidth = 100
         DataGridFornitori.Columns("email").HeaderText = "Email"
-        DataGridFornitori.Columns("email").Width = 125
+        DataGridFornitori.Columns("email").MinimumWidth = 125
 
         ChiudiConnessione()
 
@@ -208,21 +208,21 @@ Public Class Oliv
 
         'Imposto i nomi alle etichette delle colonne della DataGrid e la loro larghezza in pixel
         DataGridFornitori.Columns("ID_fornitore").HeaderText = "ID"
-        DataGridFornitori.Columns("ID_fornitore").Width = 50
+        DataGridFornitori.Columns("ID_fornitore").MinimumWidth = 50
         DataGridFornitori.Columns("intestazione").HeaderText = "Intestazione"
-        DataGridFornitori.Columns("intestazione").Width = 125
+        DataGridFornitori.Columns("intestazione").MinimumWidth = 125
         DataGridFornitori.Columns("indirizzo").HeaderText = "Indirizzo"
-        DataGridFornitori.Columns("indirizzo").Width = 135
+        DataGridFornitori.Columns("indirizzo").MinimumWidth = 135
         DataGridFornitori.Columns("citta").HeaderText = "Città"
-        DataGridFornitori.Columns("citta").Width = 100
+        DataGridFornitori.Columns("citta").MinimumWidth = 100
         DataGridFornitori.Columns("provincia").HeaderText = "Prov."
-        DataGridFornitori.Columns("provincia").Width = 60
+        DataGridFornitori.Columns("provincia").MinimumWidth = 60
         DataGridFornitori.Columns("cap").HeaderText = "CAP"
-        DataGridFornitori.Columns("cap").Width = 60
+        DataGridFornitori.Columns("cap").MinimumWidth = 60
         DataGridFornitori.Columns("tel").HeaderText = "Recapito"
-        DataGridFornitori.Columns("tel").Width = 100
+        DataGridFornitori.Columns("tel").MinimumWidth = 100
         DataGridFornitori.Columns("email").HeaderText = "Email"
-        DataGridFornitori.Columns("email").Width = 125
+        DataGridFornitori.Columns("email").MinimumWidth = 125
 
         ChiudiConnessione()
 
@@ -253,6 +253,26 @@ Public Class Oliv
         PrintDGV.Print_DataGridView(DataGridFornitori)
 
     End Sub
+
+#End Region
+
+#Region "TAB SILOS"
+
+#End Region
+
+#Region "TAB CARICO"
+
+#End Region
+
+#Region "TAB CONFEZIONAMENTO"
+
+#End Region
+
+#Region "TAB TRASFERIMENTO"
+
+#End Region
+
+#Region "TAB INTERROGAZIONI"
 
 #End Region
 
