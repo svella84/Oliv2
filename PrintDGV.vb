@@ -124,7 +124,7 @@ Public Class PrintDGV
 
         Dim tmpWidth As Int16, i As Int16
         Dim tmpTop As Int16 = e.MarginBounds.Top
-        Dim tmpLeft As Int16 = 10
+        Dim tmpLeft As Int16 = 35
 
         Try
             ' Before starting first page, it saves Width & Height of Headers and CoulmnType
