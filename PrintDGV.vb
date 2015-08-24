@@ -171,20 +171,20 @@ Public Class PrintDGV
                     Exit Sub
                 Else
                     If NewPage Then
+
+                        Dim drawFont As New Font("Microsoft Sans Serif", 10, FontStyle.Bold)
                         ' Draw Header
-                        e.Graphics.DrawString(PrintTitle, New Font(dgv.Font, FontStyle.Bold), _
+                        e.Graphics.DrawString(PrintTitle, drawFont, _
                                 Brushes.Black, e.MarginBounds.Left, e.MarginBounds.Top - _
-                        e.Graphics.MeasureString(PrintTitle, New Font(dgv.Font, _
-                                FontStyle.Bold), e.MarginBounds.Width).Height - 20)
+                        e.Graphics.MeasureString(PrintTitle, drawFont, e.MarginBounds.Width).Height - 20)
 
                         Dim s As String = Now.ToLongDateString + " " + Now.ToShortTimeString
 
-                        e.Graphics.DrawString(s, New Font(dgv.Font, FontStyle.Bold), _
+                        e.Graphics.DrawString(s, drawFont, _
                            Brushes.Black, e.MarginBounds.Left + (e.MarginBounds.Width - _
-                           e.Graphics.MeasureString(s, New Font(dgv.Font, FontStyle.Bold), _
+                           e.Graphics.MeasureString(s, drawFont, _
                            e.MarginBounds.Width).Width), e.MarginBounds.Top - _
-                           e.Graphics.MeasureString(PrintTitle, _
-                           New Font(New Font(dgv.Font, FontStyle.Bold), FontStyle.Bold), _
+                           e.Graphics.MeasureString(PrintTitle, drawFont, _
                            e.MarginBounds.Width).Height - 20)
 
                         ' Draw Columns
@@ -328,12 +328,14 @@ Public Class PrintDGV
             cnt = dgv.SelectedRows.Count
         End If
 
+        Dim drawFont As New Font("Microsoft Sans Serif", 10)
+
         ' Writing the Page Number on the Bottom of Page
         Dim PageNum As String = PageNo.ToString + " of " + _
                     Math.Ceiling(cnt / RowsPerPage).ToString
-        e.Graphics.DrawString(PageNum, dgv.Font, Brushes.Black, _
+        e.Graphics.DrawString(PageNum, drawFont, Brushes.Black, _
                     e.MarginBounds.Left + (e.MarginBounds.Width - _
-                    e.Graphics.MeasureString(PageNum, dgv.Font, _
+                    e.Graphics.MeasureString(PageNum, drawFont, _
                     e.MarginBounds.Width).Width) / 2, e.MarginBounds.Top + _
                     e.MarginBounds.Height + 31)
 

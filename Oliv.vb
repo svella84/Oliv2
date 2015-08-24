@@ -9,8 +9,11 @@ Public Class Oliv
         DataGridForShow()
         DataGridSilosShow()
         DataGridFornitoriToAllSilosShow()
+        DataGridCaricoShow()
 
         PopolaComboOlio()
+        PopolaComboFornitore()
+        PopolaComboSilos()
 
     End Sub
 
@@ -251,6 +254,14 @@ Public Class Oliv
 
     Private Sub btnRefreshFornitore_Click(sender As System.Object, e As System.EventArgs) Handles btnRefreshFornitore.Click
 
+        txtSearchFornitori.Text = ""
+        clearFornitore()
+
+        btnReturnFornitore.Visible = False
+        btnInsertFornitore.Visible = True
+        btnDeleteFornitore.Enabled = False
+        btnModFornitore.Enabled = False
+
         DataGridForShow()
         DataGridFornitori.ClearSelection()
 
@@ -298,20 +309,6 @@ Public Class Oliv
         DataGridSilos.ClearSelection()
 
         ChiudiConnessione()
-
-    End Sub
-
-    Public Sub PopolaComboOlio()
-
-        stringasql = "SELECT id_olio, tipo_olio FROM Olio"
-        Dim daOlio As New SqlDataAdapter(stringasql, connection)
-        Dim dsOlio As New DataSet
-        daOlio.Fill(dsOlio, "Olio")
-        Dim dtOlio As DataTable = dsOlio.Tables("Olio")
-        Dim row As DataRow = dtOlio.NewRow()
-        cbOlioToSilos.DataSource = dtOlio
-        cbOlioToSilos.ValueMember = "ID_olio"
-        cbOlioToSilos.DisplayMember = "tipo_olio"
 
     End Sub
 
@@ -445,7 +442,9 @@ Public Class Oliv
     Private Sub btnRefreshFornitoreToSilos_Click(sender As Object, e As EventArgs) Handles btnRefreshFornitoreToSilos.Click
         
         btnModSilos.Enabled = False
-        Me.cbOlioToSilos.Text = ""
+        txtSearchFornitoriToSilos.Text = ""
+        txtSearchFornitoriNDAToSilos.Text = ""
+        cbOlioToSilos.Text = ""
 
         GroupBox3.Text = "FORNITORI"
 
@@ -505,6 +504,48 @@ Public Class Oliv
 
 #Region "TAB CARICO"
 
+    Private Sub DataGridCaricoShow()
+
+        ApriConnessione()
+
+        Dim ds As New DataSet
+        Dim dt As New DataTable
+
+        ds.Tables.Add(dt)
+        Dim da As New SqlDataAdapter
+        stringasql = "SELECT Carico.id_carico, Carico.data_carico, Carico.fk_fornitore, Fornitori.intestazione, Carico.fk_silos, Silos.tipo_silos, Carico.fk_olio, Olio.tipo_olio, Carico.kg_carico, Carico.NDA, Carico.data_DA FROM (((Carico INNER JOIN Silos ON Carico.fk_silos = Silos.id_silos) INNER JOIN Olio ON Carico.fk_olio = Olio.id_olio) INNER JOIN Fornitori ON Carico.fk_fornitore = Fornitori.id_fornitore)"
+        da = New SqlDataAdapter(stringasql, connection)
+        da.Fill(dt)
+        DataGridCarico.DataSource = dt.DefaultView
+
+        'Imposto i nomi alle etichette delle colonne della DataGrid e la loro larghezza in pixel
+        DataGridCarico.Columns("id_carico").HeaderText = "ID"
+        DataGridCarico.Columns("id_carico").MinimumWidth = 30
+        DataGridCarico.Columns("id_carico").Width = 50
+        DataGridCarico.Columns("data_carico").HeaderText = "Data"
+        DataGridCarico.Columns("data_carico").MinimumWidth = 80
+        DataGridCarico.Columns("fk_fornitore").Visible = False
+        DataGridCarico.Columns("intestazione").HeaderText = "Fornitore"
+        DataGridCarico.Columns("intestazione").MinimumWidth = 150
+        DataGridCarico.Columns("fk_silos").Visible = False
+        DataGridCarico.Columns("tipo_silos").HeaderText = "Silos"
+        DataGridCarico.Columns("tipo_silos").MinimumWidth = 60
+        DataGridCarico.Columns("fk_olio").Visible = False
+        DataGridCarico.Columns("tipo_olio").HeaderText = "Tipo Olio"
+        DataGridCarico.Columns("tipo_olio").MinimumWidth = 110
+        DataGridCarico.Columns("kg_carico").HeaderText = "Kg Caricati"
+        DataGridCarico.Columns("kg_carico").MinimumWidth = 70
+        DataGridCarico.Columns("NDA").HeaderText = "NDA"
+        DataGridCarico.Columns("NDA").MinimumWidth = 90
+        DataGridCarico.Columns("data_DA").HeaderText = "Data DA"
+        DataGridCarico.Columns("data_DA").MinimumWidth = 80
+
+        DataGridCarico.ClearSelection()
+
+        ChiudiConnessione()
+
+    End Sub
+
 #End Region
 
 #Region "TAB CONFEZIONAMENTO"
@@ -518,5 +559,169 @@ Public Class Oliv
 #Region "TAB INTERROGAZIONI"
 
 #End Region
+
+    Public Sub PopolaComboOlio()
+
+        stringasql = "SELECT id_olio, tipo_olio FROM Olio"
+        Dim daOlio As New SqlDataAdapter(stringasql, connection)
+        Dim dsOlio As New DataSet
+        Dim dsOlio2 As New DataSet
+        Dim dsOlio3 As New DataSet
+        daOlio.Fill(dsOlio, "Olio")
+        daOlio.Fill(dsOlio2, "Olio")
+        daOlio.Fill(dsOlio3, "Olio")
+        Dim dtOlio As DataTable = dsOlio.Tables("Olio")
+        Dim dtOlio2 As DataTable = dsOlio2.Tables("Olio")
+        Dim dtOlio3 As DataTable = dsOlio3.Tables("Olio")
+        Dim row As DataRow = dtOlio.NewRow()
+        Dim row2 As DataRow = dtOlio2.NewRow()
+        Dim row3 As DataRow = dtOlio3.NewRow()
+
+        cbOlioToSilos.DataSource = dtOlio
+        cbOlioToSilos.ValueMember = "id_olio"
+        cbOlioToSilos.DisplayMember = "tipo_olio"
+
+        cbTipoOlioCarico.DataSource = dtOlio2
+        cbTipoOlioCarico.ValueMember = "id_olio"
+        cbTipoOlioCarico.DisplayMember = "tipo_olio"
+
+        cbTipoOlioConfezionamento.DataSource = dtOlio3
+        cbTipoOlioConfezionamento.ValueMember = "id_olio"
+        cbTipoOlioConfezionamento.DisplayMember = "tipo_olio"
+
+    End Sub
+
+    Public Sub PopolaComboFornitore()
+
+        stringasql = "SELECT id_fornitore, intestazione FROM Fornitori"
+        Dim daFornitore As New SqlDataAdapter(stringasql, connection)
+        Dim dsFornitore As New DataSet
+        Dim dsFornitore2 As New DataSet
+        daFornitore.Fill(dsFornitore, "Fornitore")
+        daFornitore.Fill(dsFornitore2, "Fornitore")
+        Dim dtFornitore As DataTable = dsFornitore.Tables("Fornitore")
+        Dim dtFornitore2 As DataTable = dsFornitore2.Tables("Fornitore")
+        Dim row As DataRow = dtFornitore.NewRow()
+        Dim row2 As DataRow = dtFornitore2.NewRow()
+
+        cbFornitoreCarico.DataSource = dtFornitore
+        cbFornitoreCarico.ValueMember = "id_fornitore"
+        cbFornitoreCarico.DisplayMember = "intestazione"
+
+        cbFornitoreInterrogazione.DataSource = dtFornitore2
+        cbFornitoreInterrogazione.ValueMember = "id_fornitore"
+        cbFornitoreInterrogazione.DisplayMember = "intestazione"
+
+    End Sub
+
+    Public Sub PopolaComboSilos()
+
+        stringasql = "SELECT id_silos, tipo_silos FROM Silos"
+        Dim daSilos As New SqlDataAdapter(stringasql, connection)
+        Dim dsSilos As New DataSet
+        Dim dsSilos2 As New DataSet
+        Dim dsSilos3 As New DataSet
+        Dim dsSilos4 As New DataSet
+        daSilos.Fill(dsSilos, "Silos")
+        daSilos.Fill(dsSilos2, "Silos")
+        daSilos.Fill(dsSilos3, "Silos")
+        daSilos.Fill(dsSilos4, "Silos")
+        Dim dtSilos As DataTable = dsSilos.Tables("Silos")
+        Dim dtSilos2 As DataTable = dsSilos2.Tables("Silos")
+        Dim dtSilos3 As DataTable = dsSilos3.Tables("Silos")
+        Dim dtSilos4 As DataTable = dsSilos4.Tables("Silos")
+        Dim row As DataRow = dtSilos.NewRow()
+        Dim row2 As DataRow = dtSilos2.NewRow()
+        Dim row3 As DataRow = dtSilos3.NewRow()
+        Dim row4 As DataRow = dtSilos4.NewRow()
+
+        cbSilosDCarico.DataSource = dtSilos
+        cbSilosDCarico.ValueMember = "id_silos"
+        cbSilosDCarico.DisplayMember = "tipo_silos"
+
+        cbSilosOConfezionamento.DataSource = dtSilos2
+        cbSilosOConfezionamento.ValueMember = "id_silos"
+        cbSilosOConfezionamento.DisplayMember = "tipo_silos"
+
+        cbSilosDTrasferimento.DataSource = dtSilos3
+        cbSilosDTrasferimento.ValueMember = "id_silos"
+        cbSilosDTrasferimento.DisplayMember = "tipo_silos"
+
+        cbSilosOTrasferimento.DataSource = dtSilos4
+        cbSilosOTrasferimento.ValueMember = "id_silos"
+        cbSilosOTrasferimento.DisplayMember = "tipo_silos"
+
+    End Sub
+
+    Private Sub cbSilosDCarico_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbSilosDCarico.SelectedIndexChanged
+
+        txtOlioToSilosCarico.Text = DataGridSilos.Rows(cbSilosDCarico.SelectedIndex).Cells(4).Value
+
+    End Sub
+
+    Private Sub cbSilosOTrasferimento_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbSilosOTrasferimento.SelectedIndexChanged
+
+        txtOlioToSilosOTrasferimento.Text = DataGridSilos.Rows(cbSilosOTrasferimento.SelectedIndex).Cells(4).Value
+
+    End Sub
+
+    Private Sub cbSilosDTrasferimento_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbSilosDTrasferimento.SelectedIndexChanged
+
+        txtOlioToSilosDTrasferimento.Text = DataGridSilos.Rows(cbSilosDTrasferimento.SelectedIndex).Cells(4).Value
+
+    End Sub
+
+    Private Sub cbSilosOConfezionamento_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbSilosOConfezionamento.SelectedIndexChanged
+
+        cbTipoOlioConfezionamento.Text = DataGridSilos.Rows(cbSilosOConfezionamento.SelectedIndex).Cells(4).Value
+
+    End Sub
+
+    Private Sub btn_about_Click(sender As Object, e As EventArgs) Handles btn_about.Click
+        Dim inf As New Info
+
+        inf.Show()
+
+    End Sub
+
+
+    Private Sub btnInsertCarico_Click(sender As Object, e As EventArgs) Handles btnInsertCarico.Click
+
+    End Sub
+
+    Private Sub btnReturnCarico_Click(sender As Object, e As EventArgs) Handles btnReturnCarico.Click
+
+        ClearCarico()
+
+        btnReturnCarico.Visible = False
+        btnInsertCarico.Visible = True
+        btnDeleteCarico.Enabled = False
+        btnModCarico.Enabled = False
+
+        DataGridCarico.ClearSelection()
+
+    End Sub
+
+    Private Sub btnModCarico_Click(sender As Object, e As EventArgs) Handles btnModCarico.Click
+
+    End Sub
+
+    Private Sub btnDeleteCarico_Click(sender As Object, e As EventArgs) Handles btnDeleteCarico.Click
+
+    End Sub
+
+    Private Sub ClearCarico()
+
+        Me.txtIdCarico.Text = ""
+        Me.txtNDACarico.Text = ""
+        Me.dtpDDACarico.Text = ""
+        Me.txtKgCaricatiCarico.Text = ""
+        Me.dtpDataOperazioneCarico.Text = ""
+
+        PopolaComboFornitore()
+        PopolaComboSilos()
+        PopolaComboOlio()
+
+    End Sub
 
 End Class
