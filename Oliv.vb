@@ -345,7 +345,7 @@ Public Class Oliv
                 'Me.cbOlioO.Text = DataGridSilos.Rows(Me.cbSilosTO.SelectedIndex).Cells(4).Value
                 'Me.cbOlioD.Text = DataGridSilos.Rows(Me.cbSilosTD.SelectedIndex).Cells(4).Value
                 'Me.cb9Olio.Text = DataGridSilos.Rows(Me.cbSilosS.SelectedIndex).Cells(4).Value
-                'Me.cb8Olio.Text = DataGridSilos.Rows(Me.cbSilosC.SelectedIndex).Cells(4).Value
+                'Me.txtOlioToSilosCarico.Text = DataGridSilos.Rows(Me.cbSilosDCarico.SelectedIndex).Cells(4).Value
 
             Else
 
@@ -440,7 +440,7 @@ Public Class Oliv
     End Sub
 
     Private Sub btnRefreshFornitoreToSilos_Click(sender As Object, e As EventArgs) Handles btnRefreshFornitoreToSilos.Click
-        
+
         btnModSilos.Enabled = False
         txtSearchFornitoriToSilos.Text = ""
         txtSearchFornitoriNDAToSilos.Text = ""
@@ -687,6 +687,248 @@ Public Class Oliv
 
     Private Sub btnInsertCarico_Click(sender As Object, e As EventArgs) Handles btnInsertCarico.Click
 
+        Dim risputente1, risputente2 As Integer
+        Dim Azione As String
+        Azione = "Carico"
+        Dim diff As Double
+
+        If txtKgCarico.Text = "" Then
+
+            MessageBox.Show("Operazione Anullata, Il campo kg Caricati non può restare vuoto", "Esito inserimento Carico", MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
+
+        ElseIf IsNumeric(txtKgCarico.Text) = False Then
+
+            MessageBox.Show("Il campo Kg Caricati deve essere numerico")
+
+        Else
+
+            If ((Me.DataGridSilos.Rows(Me.cbSilosDCarico.SelectedIndex).Cells(5).Value + Me.txtKgCarico.Text) <= Me.DataGridSilos.Rows(Me.cbSilosDCarico.SelectedIndex).Cells(2).Value) Then
+                If ((txtOlioToSilosCarico.Text = "Comunitario" Or txtOlioToSilosCarico.Text = "Aromatizzato") And (cbTipoOlioCarico.Text = "Comunitario" Or cbTipoOlioCarico.Text = "Etichetta Arancione" Or cbTipoOlioCarico.Text = "Biologico" Or cbTipoOlioCarico.Text = "Aromatizzato")) Then
+                    ApriConnessione()
+
+                    stringasql = "INSERT into carico(fk_fornitore, fk_silos, fk_olio, data_carico, kg_carico, data_DA, NDA) VALUES('"
+                    stringasql = stringasql & Me.cbFornitoreCarico.SelectedValue & "'" & ","
+                    stringasql = stringasql & "'" & Me.cbSilosDCarico.SelectedValue & "'" & ","
+                    stringasql = stringasql & "'" & Me.cbTipoOlioCarico.SelectedValue & "'" & ","
+                    stringasql = stringasql & "'" & Format(CDate(Me.dtpDataOperazioneCarico.Text), "MM/dd/yyyy") & "'" & ","
+                    stringasql = stringasql & "'" & Me.txtKgCarico.Text & "'" & ","
+                    stringasql = stringasql & "'" & Format(CDate(Me.dtpDDACarico.Text), "MM/dd/yyyy") & "'" & ","
+                    stringasql = stringasql & "'" & Me.txtNDACarico.Text & "'" & ")"
+                    cmd = New SqlCommand(stringasql, connection)
+
+                    Try
+                        risputente1 = cmd.ExecuteNonQuery()
+                        If risputente1 = 1 Then
+                            MessageBox.Show("Inserimento del carico in data " & Me.dtpDataOperazioneCarico.Text & " effettuato con successo.", "Esito inserimento carico", MessageBoxButtons.OK)
+
+                            Dim stringatest As String
+                            Dim LastIdCarico As Integer
+                            stringatest = "SELECT TOP 1 (ID_carico) FROM carico ORDER BY ID_carico DESC"
+                            cmd = New SqlCommand(stringatest, connection)
+                            LastIdCarico = cmd.ExecuteScalar
+
+                            stringasql = "INSERT into FornIntoSilos(data_inserimento, fk_fornitore, nda, data_DA, azione, fk_azione, fk_silos) VALUES('"
+                            stringasql = stringasql & Format(CDate(Me.dtpDataOperazioneCarico.Text), "MM/dd/yyyy") & "'" & ","
+                            stringasql = stringasql & "'" & Me.cbFornitoreCarico.SelectedValue & "'" & ","
+                            stringasql = stringasql & "'" & txtNDACarico.Text & "'" & ","
+                            stringasql = stringasql & "'" & Format(CDate(Me.dtpDDACarico.Text), "MM/dd/yyyy") & "'" & ","
+                            stringasql = stringasql & "'" & Azione & "'" & ","
+                            stringasql = stringasql & "'" & LastIdCarico & "'" & ","
+                            stringasql = stringasql & "'" & Me.cbSilosDCarico.SelectedValue & "'" & ")"
+                            cmd = New SqlCommand(stringasql, connection)
+
+                            Try
+                                risputente2 = cmd.ExecuteNonQuery()
+                                If (risputente2 = 1) Then
+                                    MessageBox.Show("Aggiunta del fornitore al silos effettuato con successo.", "Esito inserimento fornitore", MessageBoxButtons.OK)
+                                    DataGridFornitoriToAllSilosShow()
+                                    ChiudiConnessione()
+
+                                End If
+                            Catch ex As Exception
+                                MessageBox.Show(ex.Message, "Errore: Nessun fornitore aggiunto al silos", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                            End Try
+                            ApriConnessione()
+
+                            diff = CDbl(DataGridSilos.Rows(Me.cbSilosDCarico.SelectedIndex).Cells(5).FormattedValue) + CDbl(txtKgCarico.Text)
+
+                            stringasql = "UPDATE Silos SET carico = '" & diff & "'"
+                            stringasql = stringasql & " WHERE(ID_silos = " & Me.cbSilosDCarico.SelectedValue & ")"
+                            cmd = New SqlCommand(stringasql, connection)
+
+                            Try
+                                risputente2 = cmd.ExecuteNonQuery()
+                                If (risputente2 = 1) Then
+                                    DataGridSilosShow()
+                                End If
+                            Catch ex As Exception
+                                MessageBox.Show(ex.Message, "Errore: Nessun Dato Modificat su silos", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                            End Try
+
+                            DataGridCaricoShow()
+                            ClearCarico()
+                            ChiudiConnessione()
+
+                        End If
+                    Catch ex As Exception
+                        MessageBox.Show(ex.Message, "Errore: Nessun Dato Inserito su carico", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    End Try
+
+                ElseIf (txtOlioToSilosCarico.Text = "Biologico" And (cbTipoOlioCarico.Text = "Biologico")) Then
+
+                    ApriConnessione()
+                    stringasql = "INSERT into carico(fk_fornitore, fk_silos, fk_olio, data_carico, kg_carico, data_DA, NDA) VALUES('"
+                    stringasql = stringasql & Me.cbFornitoreCarico.SelectedValue & "'" & ","
+                    stringasql = stringasql & "'" & Me.cbSilosDCarico.SelectedValue & "'" & ","
+                    stringasql = stringasql & "'" & Me.cbTipoOlioCarico.SelectedValue & "'" & ","
+                    stringasql = stringasql & "'" & Format(CDate(Me.dtpDataOperazioneCarico.Text), "MM/dd/yyyy") & "'" & ","
+                    stringasql = stringasql & "'" & Me.txtKgCarico.Text & "'" & ","
+                    stringasql = stringasql & "'" & Format(CDate(Me.dtpDDACarico.Text), "MM/dd/yyyy") & "'" & ","
+                    stringasql = stringasql & "'" & Me.txtNDACarico.Text & "'" & ")"
+
+                    cmd = New SqlCommand(stringasql, connection)
+                    Try
+                        risputente1 = cmd.ExecuteNonQuery()
+                        If risputente1 = 1 Then
+                            MessageBox.Show("Inserimento del carico in data " & Me.dtpDataOperazioneCarico.Text & " effettuato con successo.", "Esito inserimento carico", MessageBoxButtons.OK)
+
+                            Dim stringatest As String
+                            Dim LastIdCarico As Integer
+                            stringatest = "SELECT TOP 1 (ID_carico) FROM carico ORDER BY ID_carico DESC"
+                            cmd = New SqlCommand(stringatest, connection)
+                            LastIdCarico = cmd.ExecuteScalar
+
+                            stringasql = "INSERT into FornIntoSilos(data_inserimento, fk_fornitore, nda, data_DA, azione, fk_azione, fk_silos) VALUES('"
+                            stringasql = stringasql & Format(CDate(Me.dtpDataOperazioneCarico.Text), "MM/dd/yyyy") & "'" & ","
+                            stringasql = stringasql & "'" & Me.cbFornitoreCarico.SelectedValue & "'" & ","
+                            stringasql = stringasql & "'" & txtNDACarico.Text & "'" & ","
+                            stringasql = stringasql & "'" & Format(CDate(Me.dtpDDACarico.Text), "MM/dd/yyyy") & "'" & ","
+                            stringasql = stringasql & "'" & Azione & "'" & ","
+                            stringasql = stringasql & "'" & LastIdCarico & "'" & ","
+                            stringasql = stringasql & "'" & Me.cbSilosDCarico.SelectedValue & "'" & ")"
+                            cmd = New SqlCommand(stringasql, connection)
+
+                            Try
+                                risputente2 = cmd.ExecuteNonQuery()
+                                If (risputente2 = 1) Then
+                                    MessageBox.Show("Aggiunta del fornitore al silos effettuato con successo.", "Esito inserimento fornitore", MessageBoxButtons.OK)
+                                    DataGridFornitoriToAllSilosShow()
+                                    ChiudiConnessione()
+
+                                End If
+                            Catch ex As Exception
+                                MessageBox.Show(ex.Message, "Errore: Nessun fornitore aggiunto al silos", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                            End Try
+                            ApriConnessione()
+
+                            diff = CDbl(DataGridSilos.Rows(Me.cbSilosDCarico.SelectedIndex).Cells(5).FormattedValue) + CDbl(txtKgCarico.Text)
+
+                            stringasql = "UPDATE silos SET carico = '" & diff & "'"
+                            stringasql = stringasql & " WHERE(ID_silos = " & Me.cbSilosDCarico.SelectedValue & ")"
+
+                            cmd = New SqlCommand(stringasql, connection)
+                            Try
+                                risputente2 = cmd.ExecuteNonQuery()
+                                If (risputente2 = 1) Then
+                                    DataGridSilosShow()
+                                End If
+                            Catch ex As Exception
+                                MessageBox.Show(ex.Message, "Errore: Nessun Dato Modificat su silos", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                            End Try
+
+                            DataGridCaricoShow()
+                            ClearCarico()
+                            ChiudiConnessione()
+
+                        End If
+
+                    Catch ex As Exception
+                        MessageBox.Show(ex.Message, "Errore: Nessun Dato Inserito su carico", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    End Try
+
+                ElseIf (txtOlioToSilosCarico.Text = "Etichetta Arancione" And (cbTipoOlioCarico.Text = "Biologico" Or cbTipoOlioCarico.Text = "Etichetta Arancione")) Then
+
+                    ApriConnessione()
+                    stringasql = "INSERT into carico(fk_fornitore, fk_silos, fk_olio, data_carico, kg_carico, data_DA, NDA) VALUES('"
+                    stringasql = stringasql & Me.cbFornitoreCarico.SelectedValue & "'" & ","
+                    stringasql = stringasql & "'" & Me.cbSilosDCarico.SelectedValue & "'" & ","
+                    stringasql = stringasql & "'" & Me.cbTipoOlioCarico.SelectedValue & "'" & ","
+                    stringasql = stringasql & "'" & Format(CDate(Me.dtpDataOperazioneCarico.Text), "MM/dd/yyyy") & "'" & ","
+                    stringasql = stringasql & "'" & Me.txtKgCarico.Text & "'" & ","
+                    stringasql = stringasql & "'" & Format(CDate(Me.dtpDDACarico.Text), "MM/dd/yyyy") & "'" & ","
+                    stringasql = stringasql & "'" & Me.txtNDACarico.Text & "'" & ")"
+
+                    cmd = New SqlCommand(stringasql, connection)
+                    Try
+                        risputente1 = cmd.ExecuteNonQuery()
+                        If risputente1 = 1 Then
+                            MessageBox.Show("Inserimento del carico in data " & Me.dtpDataOperazioneCarico.Text & " effettuato con successo.", "Esito inserimento carico", MessageBoxButtons.OK)
+
+                            Dim stringatest As String
+                            Dim LastIdCarico As Integer
+                            stringatest = "SELECT TOP 1 (ID_carico) FROM carico ORDER BY ID_carico DESC"
+                            cmd = New SqlCommand(stringatest, connection)
+                            LastIdCarico = cmd.ExecuteScalar
+
+                            stringasql = "INSERT into FornIntoSilos(data_inserimento, fk_fornitore, nda, data_DA, azione, fk_azione, fk_silos) VALUES('"
+                            stringasql = stringasql & Format(CDate(Me.dtpDataOperazioneCarico.Text), "MM/dd/yyyy") & "'" & ","
+                            stringasql = stringasql & "'" & Me.cbFornitoreCarico.SelectedValue & "'" & ","
+                            stringasql = stringasql & "'" & txtNDACarico.Text & "'" & ","
+                            stringasql = stringasql & "'" & Format(CDate(Me.dtpDDACarico.Text), "MM/dd/yyyy") & "'" & ","
+                            stringasql = stringasql & "'" & Azione & "'" & ","
+                            stringasql = stringasql & "'" & LastIdCarico & "'" & ","
+                            stringasql = stringasql & "'" & Me.cbSilosDCarico.SelectedValue & "'" & ")"
+                            cmd = New SqlCommand(stringasql, connection)
+
+                            Try
+                                risputente2 = cmd.ExecuteNonQuery()
+                                If (risputente2 = 1) Then
+                                    MessageBox.Show("Aggiunta del fornitore al silos effettuato con successo.", "Esito inserimento fornitore", MessageBoxButtons.OK)
+                                    DataGridFornitoriToAllSilosShow()
+                                    ChiudiConnessione()
+
+                                End If
+                            Catch ex As Exception
+                                MessageBox.Show(ex.Message, "Errore: Nessun fornitore aggiunto al silos", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                            End Try
+                            ApriConnessione()
+
+                            diff = CDbl(DataGridSilos.Rows(Me.cbSilosDCarico.SelectedIndex).Cells(5).FormattedValue) + CDbl(txtKgCarico.Text)
+
+                            stringasql = "UPDATE silos SET carico = '" & diff & "'"
+                            stringasql = stringasql & " WHERE(ID_silos = " & Me.cbSilosDCarico.SelectedValue & ")"
+
+                            cmd = New SqlCommand(stringasql, connection)
+                            Try
+                                risputente2 = cmd.ExecuteNonQuery()
+                                If (risputente2 = 1) Then
+                                    DataGridSilosShow()
+                                End If
+                            Catch ex As Exception
+                                MessageBox.Show(ex.Message, "Errore: Nessun Dato Modificat su silos", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                            End Try
+
+                            DataGridCaricoShow()
+                            ClearCarico()
+                            ChiudiConnessione()
+
+                        End If
+
+                    Catch ex As Exception
+                        MessageBox.Show(ex.Message, "Errore: Nessun Dato Inserito su carico", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    End Try
+
+                Else
+                    MessageBox.Show("Inserimento olio errato verificare olio Silos e olio Fornitore", "Esito inserimento carico", MessageBoxButtons.OK)
+
+                End If
+            Else
+                MessageBox.Show("Inserimento olio errato carico superiore alla capienza del silos", "Esito inserimento carico", MessageBoxButtons.OK)
+
+            End If
+
+        End If
+
     End Sub
 
     Private Sub btnReturnCarico_Click(sender As Object, e As EventArgs) Handles btnReturnCarico.Click
@@ -715,7 +957,7 @@ Public Class Oliv
         Me.txtIdCarico.Text = ""
         Me.txtNDACarico.Text = ""
         Me.dtpDDACarico.Text = ""
-        Me.txtKgCaricatiCarico.Text = ""
+        Me.txtKgCarico.Text = ""
         Me.dtpDataOperazioneCarico.Text = ""
 
         PopolaComboFornitore()
